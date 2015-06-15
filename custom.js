@@ -21,7 +21,7 @@
       mapTypeId: google.maps.MapTypeId.ROADMAP
    });
 // map asks for clients location on mobile only
-if ( $(window).width() <= 768) {     
+if ( $(window).width() <= 768) {
        // scripts
    if (navigator.geolocation) {
      navigator.geolocation.getCurrentPosition(function (position) {
@@ -54,6 +54,7 @@ var infowindow = new google.maps.InfoWindow();
         }
       })(newMarker, i));
    }
+
 function displayMarkers(category) {
      var i;
 
@@ -66,3 +67,19 @@ function displayMarkers(category) {
        }
      }
    }
+
+
+
+/*
+    This function tells the browser to send
+    a request to the server
+    to get locations of stores or whatever.
+*/
+function loadLocationData(){
+
+  //doesn't work for IE 5 or 6.
+  var file_request = new XMLHttpRequest();
+
+  file_request.open("GET","locations.csv",true);
+  file_request.send();
+}
