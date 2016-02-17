@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">  
+  <title>Google Maps JavaScript API RGCarpentry</title> 
+  <!-- Bootstrap core CSS -->
+  <link href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
+  <!-- Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,800,200' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <!--icon -->
+  <link rel="icon" type="image/png" alt="rg.carpentry logo" href="favicon-32x32.png" sizes="32x32">
+  <!--style sheet -->
+  <link rel="stylesheet" href="items/style.css">
+</head> 
+<body> 
+  <!--header -->
+<header>
+<div class="container">
+  <div class="row clearfix">
+    <div class="col-xs-2"><img src="items/wind_swept_tree.svg" alt="rg.carpentry logo" class="logo img-responsive"></div>
+    <div class="col-xs-10">
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> 
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+           </button>
+        </div><!--/navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">We Deliver</a></li>
+            <li><a href="#">Recent Projects</a></li>
+            <li><a href="#">Meet the Team</a></li>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div><!--/collapse navbar-collapse -->
+      </nav><!--/nav -->
+    </div><!--/col-xs-10  -->
+  </div><!--/row clearfix -->
+</div><!--/container -->
+</header>
+<!--/header -->
+<!--=============================-->
+<!-- tab section -->
+  <div class="main">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="main-box">
+            <div class="tab-content">
+          <div class="tab-pane active" id="office">
+            <h1>Visit our showrooms</h1>
+            <h4>Click on the tabs below to see different locations</h4>
+          </div>
+          </div><!-- tab-content --> 
+            <ul class="nav nav-tabs" id="myTab">
+              <li><a id="link1" href="#office" data-toggle="tab" onclick="displayMarkers(1);">Building Renovations</a></li>
+              <li><a id="link2" href="#rnd" data-toggle="tab" onclick="displayMarkers(2);">Bespoke Bathrooms</a></li>
+              <li><a id="link3" href="#home" data-toggle="tab" onclick="displayMarkers(3);">New Builds</a></li>
+              <li><a id="link4" href="#home" data-toggle="tab" onclick="displayMarkers(1);">Building Extensions</a></li>
+            </ul>
+          </div><!-- main-box --> 
+        </div><!-- col-xs-12--> 
+      </div><!-- row --> 
+    </div><!-- Container --> 
+  </div><!-- main --> 
+<!-- /tab section -->
+<!-- map section -->
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div id="map"></div>
+            </div><!-- col-xs-12 col-sm-5 --> 
+        </div><!-- row --> 
+    </div><!-- Container --> 
+<!-- /map section -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp"> </script>
+  <script type="text/javascript" src="items/bootstrap.js"></script>
+        <!-- Script tag -->
+  <script type="text/javascript" src="custom.js"></script>
+</body> 
+</html>
